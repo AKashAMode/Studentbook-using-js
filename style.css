@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-container{
+    height: 100vh;
+}
+
+.heading{
+    text-align: center;
+}
+
+.container{
+    height: 90%;
+    border: 2px solid #000;
+    width: 40rem;
+    display: flex;
+    justify-content: space-around;
+    margin: 2px auto;
+    background-color: rgb(226, 248, 232);
+}
+
+.input-box{
+    height: 110px;
+    margin-top: 20px;
+    padding: 10px;
+    width: 50%;
+    border-radius: 10px;
+    background-color: #ececec;
+    border: none;
+    border: 1px double #000;
+}
+
+.input{
+    padding: 5px;
+    height: 40px;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.btn-box{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.btn-style{
+    padding: 7px;
+    width: 40%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-btn{
+    background-color: #4bfa85;
+}
+
+.remove-btn{
+    background-color: #ec5050;
+}
+
+.phonenum-box{
+    height: 95%;
+    width: 300px;
+    margin-top: 15px;
+    background-color: #fff9f9;
+    border-radius: 10px;
+    padding-top: 20px;
+    overflow: scroll;
+}
+
+.number-card{
+    border: 1px solid #000;
+    margin: 0px 20px;
+    padding: 10px;
+    border-radius: 20px;
+    
+}

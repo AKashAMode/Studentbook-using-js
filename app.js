@@ -1,22 +1,53 @@
 
 
 
-const number = [9345334435,4343345682,9833423232,
-               9345674545,8756454345];
+const products = [
+    "Laptop",
+    "Smartphone",
+    "Headphones",
+    "Keyboard",
+    "Mouse",
+];
 
 
+function getRandomEmg(){
+
+    const productEmojis = [
+        "💻","📱", "🎧",  "⌨️", "🖱️", "🖥️",  "📷", "⌚","📠",  
+        "📺", "📀", "🔋",  "🔌",  "📡", "📹","🖨️",  "🎥"   
+    ];
+
+    const min = 0;
+    const max = productEmojis.length-1;
+
+    const randomIndex = Math.floor(Math.random() * (max-min + 1)) + min;
     
+    return productEmojis[randomIndex];
+}
+
+
 
 function loadNum(){
-   
     const phonenum = document.getElementById('phonenum-box');
     phonenum.innerHTML = "";  
-    for(let i=0;i<number.length;i++){
-     phonenum.innerHTML += `<div class="number-card">${i+1}) ${number[i]}</div></br>`;
+    for(let i=0;i<products.length;i++){
+     phonenum.innerHTML += `<div class="number-card"> ${getRandomEmg()}  ${i+1})  ${products[i]}</div></br>`;
     } 
 }
 
+
+const numinput = document.getElementById('input');
+
 function addNum(){
-    const numinput = document.getElementById(input);
-    number.push(numinput.value);git 
+    products.push(numinput.value);
+    numinput.value = "";
+    loadNum();
+}
+
+
+function removeNum(){
+    const productIndex = products.indexOf(numinput.value);
+    numinput.value = "";
+    products.splice(productIndex, 1);
+    loadNum();
 }

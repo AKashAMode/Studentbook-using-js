@@ -23,7 +23,7 @@
 }
 
 .input-box{
-    height: 110px;
+    height: fit-content;
     margin-top: 20px;
     padding: 10px;
     width: 50%;
@@ -38,6 +38,7 @@
     height: 40px;
     width: 100%;
     border-radius: 20px;
+    margin: 5px 0px;
 }
 
 .btn-box{
@@ -78,5 +79,5 @@
     margin: 0px 20px;
     padding: 10px;
     border-radius: 20px;
-    
+    background-color: #e2e2e2;
 }

@@ -1,37 +1,36 @@
 
-
-
-const products = [
-    "Laptop",
-    "Smartphone",
-    "Headphones",
-    "Keyboard",
-    "Mouse",
+const students = [
+    "Aarav","Vivaan","Aditya",
+    "Ananya","Krishna","arya",
+    "Sai","Rohit","Akashy"
 ];
 
 
 function getRandomEmg(){
 
-    const productEmojis = [
-        "💻","📱", "🎧",  "⌨️", "🖱️", "🖥️",  "📷", "⌚","📠",  
-        "📺", "📀", "🔋",  "🔌",  "📡", "📹","🖨️",  "🎥"   
+    const faceEmojis = [
+        "😓","😀","😂","😍",
+        "😎", "😢","😡", "🥳",
+        "😱", "🤔","😴","🤗",
+        "🙄","😏","🥺","😇",
+        "🤩","😻","🙈","😸","😺"
     ];
 
     const min = 0;
-    const max = productEmojis.length-1;
+    const max = faceEmojis.length-1;
 
     const randomIndex = Math.floor(Math.random() * (max-min + 1)) + min;
     
-    return productEmojis[randomIndex];
+    return faceEmojis[randomIndex];
 }
 
-
+const messagebox = document.getElementById('message');
 
 function loadNum(){
     const phonenum = document.getElementById('phonenum-box');
     phonenum.innerHTML = "";  
-    for(let i=0;i<products.length;i++){
-     phonenum.innerHTML += `<div class="number-card"> ${getRandomEmg()}  ${i+1})  ${products[i]}</div></br>`;
+    for(let i=0;i<students.length;i++){
+     phonenum.innerHTML += `<div class="number-card"> ${getRandomEmg()}  ${i+1})  ${students[i]}</div></br>`;
     } 
 }
 
@@ -39,15 +38,21 @@ function loadNum(){
 const numinput = document.getElementById('input');
 
 function addNum(){
-    products.push(numinput.value);
-    numinput.value = "";
-    loadNum();
+
+    if(numinput.value.length >= 1 && isNaN(numinput.value)){
+        students.push(numinput.value);
+        numinput.value = "";
+        loadNum();
+        messagebox.innerHTML = "";
+    }else{
+        messagebox.innerHTML = "Enter Valid Input !!!!";
+    }
+
 }
 
-
 function removeNum(){
-    const productIndex = products.indexOf(numinput.value);
+    const productIndex = students.indexOf(numinput.value);
     numinput.value = "";
-    products.splice(productIndex, 1);
+    students.splice(productIndex, 1);
     loadNum();
 }

@@ -52,7 +52,7 @@ function addNum(){
 
 function removeNum(){
     const productIndex = students.indexOf(numinput.value);
-    numinput.value = "";
-    students.splice(productIndex, 1);
-    loadNum();
+     numinput.value = "";
+     students.splice(productIndex, 1);
+     loadNum();
 }
